@@ -1,0 +1,213 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0px;
+  color: white;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+
+  @include laptop-min {
+    padding: 14px 0px;
+    background-color: white;
+    color: var(--primary);
+
+    .logo-dark {
+      display: block !important;
+    }
+    .logo-white {
+      display: none !important;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+
+    @include laptop-min {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 75px;
+
+    @include laptop-min {
+      width: 130px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .logo-dark {
+      display: none;
+    }
+  }
+  &__nav {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 20px 5px 5px;
+    border-radius: 24px;
+    color: var(--black);
+    box-shadow:
+      0 0px 1px 0 rgba(0, 0, 0, 0.05),
+      0 -0px 4px 0 rgba(0, 0, 0, 0.06),
+      0 -0px 7px 0 rgba(0, 0, 0, 0.06),
+      0 -1px 15px 0 rgba(0, 0, 0, 0.08),
+      0 -3px 41px 0 rgba(0, 0, 0, 0.14);
+    background: #fff;
+
+    @include laptop-min {
+      position: absolute;
+      left: -9999px;
+      z-index: -9999;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    .drop {
+      &._open {
+        .drop-btn {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .drop-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      border-radius: 24px;
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: var(--primary);
+      color: white;
+
+      transition: background-color 0.3s ease;
+      @include hover {
+        background-color: var(--primary-h);
+      }
+
+      i {
+        flex-shrink: 0;
+        font-size: 8px;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    & > li > a {
+      display: block;
+      padding: 5px 0px;
+
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__widgets-drop {
+    padding: 15px;
+    background-color: white;
+    width: 245px;
+    border-radius: 12px;
+    box-shadow:
+      0 0px 1px 0 rgba(0, 0, 0, 0.05),
+      0 -0px 4px 0 rgba(0, 0, 0, 0.06),
+      0 -0px 7px 0 rgba(0, 0, 0, 0.06),
+      0 -1px 15px 0 rgba(0, 0, 0, 0.08),
+      0 -3px 41px 0 rgba(0, 0, 0, 0.14);
+  }
+  &__widgets-drop-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  &__widgets-drop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      gap: 10px;
+
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+
+      .item-rect {
+        @include flex-center;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background-color: var(--primary-l);
+        font-size: 10px;
+        color: var(--primary);
+
+        i {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__login-btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+    padding: 10px 0px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    transition: opacity 0.3s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+    @include laptop-min {
+      display: none;
+    }
+
+    i {
+      flex-shrink: 0;
+      transform: rotate(-45deg);
+      font-size: 15px;
+    }
+  }
+  &__burger-btn {
+    @include flex-center;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--black);
+    }
+
+    @media (min-width: 1026px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.slider-arrows {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+
+  @include laptop-min {
+    gap: 15px;
+  }
+}
+
+.slider-arrow {
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+  --background: var(--primary);
+  --background-h: var(--primary-h);
+  --color: white;
+  --color-h: white;
+
+  @include flex-center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  color: var(--color);
+  font-size: 17px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    opacity 0.3s ease;
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  @include laptop-min {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+  }
+  @include hover {
+    background-color: var(--background-h);
+    color: var(--color-h);
+    border-color: var(--border-h);
+  }
+
+  &._white {
+    --border: white;
+    --border-h: var(--alto);
+    --background: white;
+    --background-h: var(--alto);
+    --color: var(--black);
+    --color-h: var(--black);
+  }
+}

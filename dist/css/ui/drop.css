@@ -1,0 +1,21 @@
+.drop {
+  position: relative;
+}
+
+.drop._open .drop-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.drop-body {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  margin-top: 10px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}

@@ -1,0 +1,30 @@
+.m-title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 125%;
+  margin: 0;
+}
+
+@media (max-width: 1365px) {
+  .m-title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .m-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .m-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .m-title {
+    font-size: 24px;
+  }
+}

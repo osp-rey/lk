@@ -1,0 +1,23 @@
+@use "./base/normalize";
+@use "./base/fonts";
+@use "./base/vars";
+@use "./base/templates";
+@use "./base/settings";
+@use "./base/media";
+@use "./base/body-config";
+@use "./base/config-container";
+
+@use "./ui/button";
+@use "./ui/list";
+@use "./ui/title";
+@use "./ui/tab";
+@use "./ui/drop";
+@use "./ui/card-widget";
+@use "./ui/slider";
+
+@use "./components/header";
+@use "./components/burger";
+
+@use "./components/s-hero";
+
+@use "./components/footer";

@@ -1,0 +1,61 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.btn-s {
+  --background: var(--primary);
+  --background-h: var(--primary-h);
+  --color: white;
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+
+  @include flex-center;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  width: fit-content;
+
+  padding: 14px 25px;
+  border-radius: 100px;
+
+  user-select: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  @include hover {
+    background-color: var(--background-h);
+    color: var(--color-h);
+    border-color: var(--border-h);
+  }
+
+  &._white {
+    --background: white;
+    --background-h: var(--alto);
+    --color: var(--black);
+    --color-h: var(--black);
+    --border: white;
+    --border-h: var(--alto);
+  }
+  &._outline-white {
+    --background: transparent;
+    --background-h: white;
+    --color: white;
+    --color-h: var(--black);
+    --border: white;
+    --border-h: white;
+  }
+}

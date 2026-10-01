@@ -1,0 +1,49 @@
+.card-widget__gallery {
+  position: relative;
+  border: 2px solid var(--perfume);
+  border-radius: 10px;
+  background: rgba(238, 238, 246, 0.4);
+}
+
+.card-widget__gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-widget__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 30px 0px 30px;
+}
+
+.card-widget__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 117%;
+}
+
+.card-widget__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1025px) {
+  .card-widget__body {
+    padding: 15px 20px 0px 20px;
+  }
+
+  .card-widget__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-widget__title {
+    font-size: 16px;
+  }
+}
