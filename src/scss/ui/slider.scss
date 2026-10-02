@@ -60,3 +60,37 @@
     --color-h: var(--black);
   }
 }
+
+.slider-scrollbar {
+  --background: rgba(0, 0, 0, 0.2);
+  --color: var(--primary);
+  margin-top: 35px;
+  height: 1px;
+  background-color: var(--background);
+
+  @include laptop-min {
+    margin-top: 25px;
+  }
+
+  &.swiper-scrollbar-lock {
+    display: none;
+  }
+  &._lap-min {
+    @media (Min-width: 1026px) {
+      display: none;
+    }
+  }
+
+  .swiper-scrollbar-drag {
+    position: relative;
+    background-color: var(--color);
+  
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -1px 0px;
+      background-color: var(--color);
+      z-index: 1;
+    }
+  }
+}

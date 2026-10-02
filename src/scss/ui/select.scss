@@ -1,0 +1,57 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.select {
+  position: relative;
+
+  &._open {
+    .select-arrow {
+      transform: rotate(180deg);
+    }
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.select-arrow {
+  flex-shrink: 0;
+  transition: transform .3s ease;
+}
+.select-input {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  width: 100%;
+}
+.select-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  transform: translateY(0);
+  overflow-y: auto;
+  max-height: 150px;
+  z-index: 10;
+  margin-top: 5px;
+
+  transform: translateY(15px);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+}

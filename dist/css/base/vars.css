@@ -6,4 +6,9 @@
   --primary: #4f46e5;
   --primary-h: #423bca;
   --primary-l: rgba(79, 70, 229, 0.1);
+  --gradient: linear-gradient(
+    273.22deg,
+    #4f46e5 10.28%,
+    rgba(79, 70, 229, 0.58) 102.45%
+  );
 }

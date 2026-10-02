@@ -1,0 +1,7 @@
+@media (min-width: 1200px) {
+  .tilt-item {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.3s ease-in;
+  }
+}

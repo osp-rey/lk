@@ -1,0 +1,228 @@
+.s-faq__wrap {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.s-faq__info {
+  flex: 0 1 615px;
+}
+
+.s-faq__content {
+  margin-top: 35px;
+}
+
+.s-faq__social {
+  margin-top: 50px;
+  width: 470px;
+  max-width: 100%;
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.05), 0 -0px 4px 0 rgba(0, 0, 0, 0.06), 0 -0px 7px 0 rgba(0, 0, 0, 0.06), 0 -1px 15px 0 rgba(0, 0, 0, 0.08), 0 -3px 41px 0 rgba(0, 0, 0, 0.14);
+}
+
+.s-faq__social-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.s-faq__social-text i {
+  font-size: 24px;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.s-faq__social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.s-faq__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(27, 27, 27, 0.8);
+  border-radius: 100px;
+  padding: 15px 25px;
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(27, 27, 27, 0.8);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.s-faq__spollers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  flex: 0 1 920px;
+}
+
+.s-faq__spoller {
+  background: var(--gradient);
+  border-radius: 24px;
+  padding: 24px;
+  color: white;
+}
+
+.s-faq__spoller-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background-color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  gap: 15px;
+  user-select: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--black);
+}
+
+.s-faq__spoller-btn._spoller-active i {
+  transform: rotate(180deg);
+}
+
+.s-faq__spoller-btn i {
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.s-faq__spoller-content {
+  padding: 25px 25px 0px 25px;
+}
+
+@media (min-width: 1026px) {
+  .s-faq__info {
+    position: sticky;
+    top: 110px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-faq__spoller {
+    padding: 15px;
+  }
+
+  .s-faq__spoller-btn {
+    font-size: 20px;
+  }
+
+  .s-faq__spoller-btn i {
+    font-size: 16px;
+  }
+
+  .s-faq__spoller-content {
+    padding: 20px 20px 0px 20px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-faq__wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .s-faq__info {
+    flex: auto;
+    width: 100%;
+  }
+
+  .s-faq__content {
+    margin-top: 20px;
+  }
+
+  .s-faq__social {
+    margin-top: 30px;
+    border-radius: 12px;
+  }
+
+  .s-faq__social-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .s-faq__social-text i {
+    font-size: 20px;
+  }
+
+  .s-faq__spollers {
+    flex: auto;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .s-faq__spoller {
+    border-radius: 12px;
+  }
+
+  .s-faq__spoller-btn {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-faq__social {
+    padding: 20px;
+  }
+
+  .s-faq__social-text {
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .s-faq__social-text i {
+    font-size: 18px;
+  }
+
+  .s-faq__social-buttons {
+    gap: 10px;
+  }
+
+  .s-faq__social-btn {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+
+  .s-faq__spoller-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .s-faq__spoller-btn i {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-faq__social {
+    width: 100%;
+  }
+
+  .s-faq__spoller {
+    padding: 10px;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-faq__social-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .s-faq__social-btn:active {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}

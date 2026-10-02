@@ -39,6 +39,31 @@
   --color-h: var(--black);
 }
 
+.slider-scrollbar {
+  --background: rgba(0, 0, 0, 0.2);
+  --color: var(--primary);
+  margin-top: 35px;
+  height: 1px;
+  background-color: var(--background);
+}
+
+.slider-scrollbar.swiper-scrollbar-lock {
+  display: none;
+}
+
+.slider-scrollbar .swiper-scrollbar-drag {
+  position: relative;
+  background-color: var(--color);
+}
+
+.slider-scrollbar .swiper-scrollbar-drag::before {
+  position: absolute;
+  content: "";
+  inset: -1px 0px;
+  background-color: var(--color);
+  z-index: 1;
+}
+
 @media (max-width: 1025px) {
   .slider-arrows {
     gap: 15px;
@@ -48,6 +73,10 @@
     width: 40px;
     height: 40px;
     font-size: 11px;
+  }
+
+  .slider-scrollbar {
+    margin-top: 25px;
   }
 }
 
@@ -64,5 +93,11 @@
     background-color: var(--background-h);
     color: var(--color-h);
     border-color: var(--border-h);
+  }
+}
+
+@media (Min-width: 1026px) {
+  .slider-scrollbar._lap-min {
+    display: none;
   }
 }

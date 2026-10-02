@@ -1,5 +1,33 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
 .list {
   padding-left: 0;
   margin: 0;
   list-style: none;
+}
+
+.list-pattern {
+  li {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    i {
+      flex-shrink: 0;
+      font-size: 24px;
+      color: var(--primary);
+
+      @include tablet {
+        font-size: 16px;
+      }
+      @include tablet-min {
+        font-size: 12px;
+      }
+    }
+  }
 }

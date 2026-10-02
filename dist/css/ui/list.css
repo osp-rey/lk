@@ -3,3 +3,31 @@
   margin: 0;
   list-style: none;
 }
+
+.list-pattern li {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+
+.list-pattern li i {
+  flex-shrink: 0;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .list-pattern li {
+    gap: 10px;
+  }
+
+  .list-pattern li i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .list-pattern li i {
+    font-size: 12px;
+  }
+}

@@ -14,10 +14,21 @@
 @use "./ui/drop";
 @use "./ui/card-widget";
 @use "./ui/slider";
+@use "./ui/content-box";
+@use "./ui/sect";
+@use "./ui/tilt-item";
+@use "./ui/select";
 
 @use "./components/header";
 @use "./components/burger";
 
 @use "./components/s-hero";
+@use "./components/s-whom";
+@use "./components/s-use";
+@use "./components/s-included";
+@use "./components/s-price";
+@use "./components/s-offer";
+@use "./components/s-referral";
+@use "./components/s-faq";
 
 @use "./components/footer";
