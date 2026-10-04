@@ -1,0 +1,170 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.footer {
+  border-radius: 24px 24px 0 0;
+  background: var(--gradient);
+  color: var(--light);
+  padding: 45px 0px;
+  @include tablet {
+    padding: 40px 0px;
+    border-radius: 12px 12px 0 0;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @include tablet-min {
+      gap: 20px;
+    }
+  }
+  &__main {
+    flex: 0 1 440px;
+
+    @include laptop-middle {
+      flex-basis: 310px;
+    }
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 215px;
+
+    @include tablet-min {
+      width: 125px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__main-content {
+    opacity: 0.8;
+    margin: 30px 0px 0px 0px;
+    @include tablet-min {
+      margin-top: 20px;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    flex: 1;
+
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-min {
+      justify-content: flex-start;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__nav-col {
+    flex-basis: 225px;
+
+    @include laptop-middle {
+      flex-basis: 190px;
+    }
+    @include tablet-min {
+      flex-basis: auto;
+    }
+  }
+  &__nav-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    margin: 0px 0px 20px 0px;
+
+    @include laptop {
+      font-size: 24px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet-min {
+      font-size: 16px;
+      gap: 5px;
+    }
+
+    a {
+      transition: opacity 0.3s ease;
+      @include hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    gap: 50px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 1px solid currentColor;
+
+    color: rgba(236, 236, 236, 0.8);
+
+    @include laptop-min {
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include tablet {
+      padding-top: 40px;
+      margin-top: 40px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    a {
+      transition: opacity 0.3s ease;
+      @include hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__copyright {
+  }
+  &__bottom-list {
+    display: flex;
+    gap: 50px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    @include laptop-min {
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+}

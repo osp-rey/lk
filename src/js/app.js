@@ -8,6 +8,7 @@ import sliders from "./functions/sliders.js";
 import spoller from "./functions/spoller.js";
 import tab from "./functions/tabs.js";
 import tiltItems from "./functions/tiltItems.js";
+import toggle from "./functions/toggle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   burger();
@@ -20,4 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
   selectHandler();
   tab();
   spoller();
+  toggle();
 });
