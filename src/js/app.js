@@ -2,6 +2,7 @@ import burger from "./functions/burger.js";
 import drop from "./functions/drop.js";
 import selectHandler from "./functions/handlerSelect.js";
 import headerScroll from "./functions/headerScroll.js";
+import inputmask from "./functions/inputmask.js";
 import offsetTop from "./functions/offsetTop.js";
 import sectSticky from "./functions/sectSticky.js";
 import sliders from "./functions/sliders.js";
@@ -22,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   tab();
   spoller();
   toggle();
+  inputmask();
 });

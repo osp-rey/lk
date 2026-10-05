@@ -1,0 +1,100 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-connect {
+  &__wrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    flex: 0 1 640px;
+
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__title {
+  }
+  &__logo {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    @include laptop-middle {
+      margin-top: 30px;
+    }
+    @include laptop-min {
+      width: 500px;
+      margin-top: 20px;
+    }
+  }
+  &__form-wrap {
+    flex: 0 1 795px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow:
+      0 0px 1px 0 rgba(0, 0, 0, 0.05),
+      0 -0px 4px 0 rgba(0, 0, 0, 0.06),
+      0 -0px 7px 0 rgba(0, 0, 0, 0.06),
+      0 -1px 15px 0 rgba(0, 0, 0, 0.08),
+      0 -3px 41px 0 rgba(0, 0, 0, 0.14);
+
+    @include laptop-middle {
+      padding: 30px;
+    }
+    @include laptop-min {
+      width: 750px;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__form {
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      @include tablet {
+        gap: 15px;
+      }
+    }
+    .form-control {
+      &._full {
+        grid-column: 2 span;
+      }
+      @include tablet-min {
+        grid-column: 2 span;
+      }
+    }
+    .form-checks {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      grid-column: 2 span;
+      margin-top: 20px;
+      @include laptop-middle {
+        margin-top: 0px;
+      }
+    }
+    .btn-s[type="submit"] {
+      width: 100%;
+      grid-column: 2 span;
+      margin-top: 30px;
+      @include laptop-middle {
+        margin-top: 0px;
+      }
+    }
+  }
+}

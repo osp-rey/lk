@@ -63,4 +63,27 @@ export default function sliders() {
       },
     });
   }
+
+  const advSlider = document.querySelector(".s-adv__slider");
+
+  if (advSlider) {
+    const swiper = new Swiper(advSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 25,
+      autoplay: {
+        delay: 5500,
+      },
+      scrollbar: {
+        el: ".s-adv .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 }

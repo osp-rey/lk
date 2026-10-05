@@ -1,0 +1,99 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-tariffs {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include laptop-min {
+      width: 800px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @include tablet-min {
+      gap: 15px;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 1 1 calc(33% - 30px);
+    padding: 50px 30px;
+    border-radius: 24px;
+    border: 1px solid var(--perfume);
+    text-align: center;
+    z-index: 1;
+
+    @include laptop-middle {
+      padding: 30px 20px;
+    }
+    @include laptop-min {
+      flex-basis: 100%;
+    }
+    @include tablet {
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    &._fill {
+      background: var(--gradient);
+      color: var(--light);
+
+      .item-price {
+        color: inherit;
+      }
+    }
+
+    .item-bg {
+      position: absolute;
+      pointer-events: none;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .item-title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+      @include laptop-min {
+        font-size: 36px;
+      }
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+    .item-content {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+    .item-price {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 100%;
+      margin-top: 50px;
+      color: var(--primary);
+      @include laptop-min {
+        font-size: 36px;
+        margin-top: 25px;
+      }
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+    .item-price-text {
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+    .item-btn {
+      width: 100%;
+      margin-top: 50px;
+      @include laptop-min {
+        margin-top: 25px;
+      }
+    }
+  }
+}

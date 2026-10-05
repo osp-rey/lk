@@ -19,7 +19,7 @@
 .header__logo {
   display: block;
   width: 75px;
-  border-radius: 12px;
+  border-radius: 24px;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, padding 0.3s ease;
 }
 
@@ -127,7 +127,7 @@
   margin-left: auto;
   gap: 10px;
   padding: 10px 0px;
-  border-radius: 12px;
+  border-radius: 24px;
   font-size: 16px;
   transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
@@ -149,26 +149,22 @@
 }
 
 @media (min-width: 1026px) {
-  .header._scroll .header__logo {
-    background-color: white;
-    width: 100px;
-    padding: 15px;
+  .header._fill .header__logo {
+    background-color: var(--primary);
+    width: 115px;
+    padding: 15px 20px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.05), 0 -0px 4px 0 rgba(0, 0, 0, 0.06), 0 -0px 7px 0 rgba(0, 0, 0, 0.06), 0 -1px 15px 0 rgba(0, 0, 0, 0.08), 0 -3px 41px 0 rgba(0, 0, 0, 0.14);
   }
 
-  .header._scroll .header__logo .logo-dark {
-    display: block !important;
-  }
-
-  .header._scroll .header__logo .logo-white {
-    display: none !important;
-  }
-
-  .header._scroll .header__login-btn {
+  .header._fill .header__login-btn {
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.05), 0 -0px 4px 0 rgba(0, 0, 0, 0.06), 0 -0px 7px 0 rgba(0, 0, 0, 0.06), 0 -1px 15px 0 rgba(0, 0, 0, 0.08), 0 -3px 41px 0 rgba(0, 0, 0, 0.14);
     background-color: white;
     color: var(--black);
-    padding: 15px;
+    padding: 15px 20px;
+  }
+
+  .header._fill .header__login-btn i {
+    color: var(--primary);
   }
 
   .header__burger-btn {

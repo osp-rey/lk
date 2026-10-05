@@ -1,0 +1,134 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.form-control {
+  width: 100%;
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+}
+
+.input {
+  --background: var(--wild);
+  --border: var(--wild);
+  --color: var(--black);
+  --background-h: var(--wild);
+  --border-h: var(--black);
+  --color-h: var(--black);
+  --background-f: var(--wild);
+  --border-f: var(--primary);
+  --color-f: var(--black);
+
+  outline: none;
+  border-radius: 100px;
+  border: none;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+
+  font-size: inherit;
+  font-size: 20px;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include hover {
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+    color: var(--color-h);
+  }
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+
+  &.wpcf7-not-valid {
+    --background: var(--wild);
+    --border: var(--error);
+    --color: var(--error);
+    --background-h: var(--wild);
+    --border-h: var(--error);
+    --color-h: var(--error);
+    --background-f: var(--wild);
+    --border-f: var(--error);
+    --color-f: var(--error);
+  }
+
+  &:focus {
+    border-color: var(--border-f) !important;
+    background-color: var(--background-f) !important;
+    color: var(--color-f) !important;
+  }
+  &::placeholder {
+    color: inherit;
+    opacity: 0.8;
+  }
+}
+
+.check-wrap {
+  position: relative;
+  z-index: 1;
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked + .wpcf7-list-item-label {
+      &::before {
+        background: var(--url) center / 16px auto no-repeat;
+        background-color: var(--background-a) !important;
+        border-color: var(--border-a) !important;
+      }
+    }
+  }
+  .wpcf7-list-item-label {
+    --color: rgba(27, 27, 27, 0.8);
+    --color-link: var(--primary);
+
+    display: flex;
+    align-items: start;
+    width: fit-content;
+    gap: 15px;
+    cursor: pointer;
+
+    user-select: none;
+    color: var(--color);
+
+    a {
+      color: var(--color-link);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    &::before {
+      --border: var(--iron);
+      --background: var(--wild);
+      --border-a: var(--primary);
+      --background-a: var(--primary);
+      --url: url("@img/check-white.svg");
+
+      content: "";
+      border-radius: 4px;
+      background-color: var(--background);
+      border: 1px solid var(--border);
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+    }
+  }
+}

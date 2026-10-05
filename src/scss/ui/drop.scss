@@ -12,6 +12,9 @@
     }
   }
 }
+.drop-btn {
+  user-select: none;
+}
 .drop-body {
   position: absolute;
   top: 100%;

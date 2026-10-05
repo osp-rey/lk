@@ -13,10 +13,10 @@
   outline: none;
   cursor: pointer;
   border: 1px solid var(--border);
-  background-color: var(--background);
+  background: var(--background);
   width: fit-content;
 
-  padding: 14px 25px;
+  padding: 15px 25px;
   border-radius: 100px;
 
   user-select: none;
@@ -27,7 +27,8 @@
   transition:
     color 0.3s ease,
     border-color 0.3s ease,
-    background-color 0.3s ease;
+    background 0.3s ease,
+    opacity 0.3s ease;
 
   @include laptop-min {
     font-size: 18px;
@@ -37,7 +38,7 @@
     padding: 10px 20px;
   }
   @include hover {
-    background-color: var(--background-h);
+    background: var(--background-h);
     color: var(--color-h);
     border-color: var(--border-h);
   }
@@ -57,5 +58,14 @@
     --color-h: var(--black);
     --border: white;
     --border-h: white;
+  }
+  &._gradient {
+    --background: var(--gradient);
+    border: none;
+
+    @include hover {
+      background: var(--background);
+      opacity: 0.8;
+    }
   }
 }
