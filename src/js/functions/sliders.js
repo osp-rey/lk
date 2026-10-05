@@ -3,20 +3,24 @@ export default function sliders() {
 
   if (heroSlider) {
     const swiper = new Swiper(heroSlider, {
-      speed: 900,
+      speed: 12000,
       slidesPerView: "auto",
       spaceBetween: 15,
       autoplay: {
-        delay: 5500,
+        delay: 0,
       },
-      initialSlide: 0,
+      loop: true,
+      watchOverflow: true,
+      allowTouchMove: false,
+      watchSlidesProgress: true,
+      a11y: false,
       navigation: {
         prevEl: ".s-hero .slider-arrow._prev",
         nextEl: ".s-hero .slider-arrow._next",
       },
       breakpoints: {
         1026: {
-          slidesPerView: 2,
+          slidesPerView: "auto",
           spaceBetween: 30,
           initialSlide: 1,
         },

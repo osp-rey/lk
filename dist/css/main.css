@@ -1287,6 +1287,7 @@ img {
   position: relative;
   z-index: 1;
   color: white;
+  padding-bottom: 100px;
 }
 
 .s-hero__bg {
@@ -1377,13 +1378,17 @@ img {
 
 .s-hero__slider {
   overflow: visible !important;
-  width: 1070px;
   max-width: 100%;
-  margin: 0 auto;
+}
+
+.s-hero__slider .swiper-wrapper {
+  transition-timing-function: linear;
 }
 
 .s-hero__slide {
   box-sizing: border-box;
+  width: 520px !important;
+  max-width: 100%;
 }
 
 .s-hero__slider-arrows {
@@ -2555,6 +2560,10 @@ img {
     display: none;
   }
 
+  .s-hero {
+    padding-bottom: 50px;
+  }
+
   .s-hero__wrap {
     padding: 50px 0px;
   }
@@ -2570,7 +2579,6 @@ img {
 
   .s-hero__slide {
     width: 350px !important;
-    max-width: 100%;
   }
 
   .s-hero__slider-arrows {
